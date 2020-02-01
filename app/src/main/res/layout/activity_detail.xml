@@ -28,6 +28,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/detail_ingredients_label"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="@string/detail_also_known_as_label"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -54,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="@string/detail_place_of_origin_label"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -67,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:text="@string/detail_description_label"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
