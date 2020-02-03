@@ -16,13 +16,13 @@ public class JsonUtils {
             JSONObject sandwichObject = new JSONObject(json);
 
             JSONObject nameJsonObject = sandwichObject.getJSONObject("name");
-            String mainName = nameJsonObject.getString("mainName");
-            List<String> alsoKnownAs = Collections.singletonList(nameJsonObject.getString("alsoKnownAs"));
+            String mainName = nameJsonObject.optString("mainName");
+            List<String> alsoKnownAs = Collections.singletonList(nameJsonObject.optString("alsoKnownAs"));
 
-            String placeOfOrigin = sandwichObject.getString("placeOfOrigin");
-            String description = sandwichObject.getString("description");
-            String image = sandwichObject.getString("image");
-            List<String> ingredients = Collections.singletonList(sandwichObject.getString("ingredients"));
+            String placeOfOrigin = sandwichObject.optString("placeOfOrigin");
+            String description = sandwichObject.optString("description");
+            String image = sandwichObject.optString("image");
+            List<String> ingredients = Collections.singletonList(sandwichObject.optString("ingredients"));
 
             Sandwich sandwichItem = new Sandwich(mainName, alsoKnownAs, placeOfOrigin, description,
                     image, ingredients);
