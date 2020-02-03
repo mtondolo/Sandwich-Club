@@ -7,8 +7,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.sandwiches_listview)
+    ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, sandwiches);
 
         // Simplification: Using a ListView instead of a RecyclerView
-        ListView listView = findViewById(R.id.sandwiches_listview);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView = findViewById(R.id.sandwiches_listview);
+        mListView.setAdapter(adapter);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 launchDetailActivity(position);
